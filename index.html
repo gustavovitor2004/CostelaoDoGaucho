@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO AVANÇADO -->
+    <title>Costelão do Gaúcho | Churrascaria em Lauro de Freitas - BA</title>
+    <meta name="description"
+        content="O autêntico churrasco gaúcho com o melhor costelão de Lauro de Freitas. Buffet à quilo, espaço amplo e parquinho. Aqui você sente o cheiro da brasa!">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Costelão do Gaúcho">
+    <meta name="keywords"
+        content="churrascaria Lauro de Freitas, costelão Lauro de Freitas, churrasco Buraquinho, buffet churrasco Lauro de Freitas BA, costelão gaúcho Bahia">
+    <link rel="canonical" href="https://costelaodogaucho.com.br">
+
+    <!-- OPEN GRAPH & TWITTER CARD -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="Costelão do Gaúcho | O Genuíno Toque dos Pampas">
+    <meta property="og:description"
+        content="Sinta o cheiro da brasa antes mesmo de sentar à mesa. O melhor costelão da região de Buraquinho.">
+    <meta property="og:url" content="https://costelaodogaucho.com.br">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Costelão do Gaúcho">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Costelão do Gaúcho | Churrascaria de Tradição">
+    <meta name="twitter:description" content="Churrasco de verdade feito do jeito certo desde os pampas.">
+
+    <!-- SEGURANÇA BÁSICA -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+    <!-- FAVICON SVG -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+
+    <!-- FONTES (OSWALD + ROBOTO) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ESTILOS CSS -->
+    <style>
+        /* VARIÁVEIS CSS (PALETA CHURRASCARIA) */
+        :root {
+            --primary: #8b1a1a;
+            /* Vermelho brasa */
+            --secondary: #c9882a;
+            /* Dourado quente */
+            --bg-dark: #3d1f10;
+            /* Marrom defumado */
+            --bg: #f5efe6;
+            /* Creme envelhecido */
+            --text-dark: #1a0d07;
+            /* Texto principal (escuro) */
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ESPAÇAMENTOS VARIADOS (REGRA LAYOUT) */
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-compact {
+            padding: 60px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* HEADER */
+        .header {
+            background: rgba(61, 31, 16, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            border-bottom: 2px solid var(--primary);
+            padding: 12px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--white);
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            transition: var(--transition);
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* BOTÃO PRIMÁRIO PULSANTE */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            border-radius: 4px;
+            /* Cantos mais retos para tom forte */
+            background: var(--primary);
+            color: var(--white);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            animation: pulse-btn 3s infinite;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            border-color: var(--secondary);
+            color: var(--secondary);
+            transform: translateY(-2px);
+            animation: none;
+        }
+
+        @keyframes pulse-btn {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 15px rgba(139, 26, 26, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 6px 30px rgba(139, 26, 26, 0.7);
+            }
+        }
+
+        /* HERO FULLSCREEN (LAYOUT A - IMPACTO) */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(26, 13, 7, 0.8), rgba(61, 31, 16, 0.9)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        /* BADGE OBRIGATÓRIO NO HERO */
+        .badge-hero {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--bg-dark);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            padding: 6px 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            border-radius: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6.5rem);
+            /* Texto Enorme */
+            color: var(--white);
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--secondary);
+            font-style: italic;
+            font-weight: 500;
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        /* BARRA DE URGÊNCIA (LAYOUT A) */
+        .urgency-bar {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 16px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: var(--bg-dark);
+            padding: 50px 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-num {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }
+
+        /* SEÇÃO: COMO FUNCIONA (3 MODALIDADES HORIZONTAIS) */
+        .section-title {
+            font-size: 3rem;
+            color: var(--bg-dark);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid #e5dccf;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            color: var(--bg-dark);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #555;
+        }
+
+        /* SEÇÃO: CARDÁPIO PREMIUM (FUNDO ESCURO) */
+        .menu-section {
+            background: var(--bg-dark);
+            color: var(--white);
+        }
+
+        .menu-section .section-title {
+            color: var(--secondary);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .menu-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--secondary);
+        }
+
+        .menu-item-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--secondary);
+        }
+
+        .menu-item-info h4 {
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin-bottom: 6px;
+        }
+
+        .menu-item-info p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        /* SEÇÃO DE BEBIDAS */
+        .drinks-section {
+            background: var(--bg);
+            border-top: 1px dashed #d1c5b4;
+        }
+
+        .drinks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .drink-card {
+            padding: 30px;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .drink-card h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 16px;
+        }
+
+        /* ESTRUTURA E CONFORTO */
+        .structure-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .structure-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .structure-img {
+            border-radius: 4px;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--white);
+        }
+
+        .structure-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .structure-list li {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .structure-list li::before {
+            content: "✔";
+            color: var(--primary);
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        /* DEPOIMENTOS (CARROSSEL HORIZONTAL APROXIMADO) */
+        .testimonials {
+            background: var(--bg-dark);
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .testimonials .section-title {
+            color: var(--white);
+        }
+
+        .test-grid {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            padding-bottom: 24px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--secondary) var(--bg-dark);
+        }
+
+        .test-card {
+            min-width: 320px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-top: 3px solid var(--secondary);
+            border-radius: 4px;
+        }
+
+        .test-stars {
+            color: var(--secondary);
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+        }
+
+        .test-quote {
+            font-style: italic;
+            font-size: 1rem;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        /* MAPA E FOOTER */
+        .map-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: var(--shadow-md);
+            margin-top: 40px;
+            border: 4px solid var(--white);
+        }
+
+        .map-info {
+            background: var(--primary);
+            color: var(--white);
+            padding: 50px;
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .map-info h3 {
+            color: var(--secondary);
+            margin-bottom: 16px;
+            font-size: 2.2rem;
+        }
+
+        .map-iframe {
+            flex: 2;
+            min-width: 300px;
+            min-height: 400px;
+        }
+
+        .footer {
+            background: #1a0d07;
+            color: #aaa;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer h2 {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            margin-top: 20px;
+            border: 1px solid #444;
+            padding: 10px 24px;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            color: var(--bg-dark);
+            border-color: var(--secondary);
+        }
+
+        /* UI FLUTUANTE (WHATSAPP, CTA, TOP) */
+        .wa-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            height: 56px;
+            border-radius: 50px;
+            background: #25d366;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 24px;
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 1rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+            z-index: 1000;
+            animation: wa-pulse 2.5s infinite;
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: translateY(-3px) scale(1.05);
+            color: var(--white);
+        }
+
+        @keyframes wa-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        .cta-bar {
+            position: fixed;
+            bottom: -100px;
+            left: 0;
+            right: 0;
+            background: var(--bg-dark);
+            border-top: 4px solid var(--primary);
+            padding: 16px 24px;
+            z-index: 998;
+            transition: bottom 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            color: var(--white);
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .cta-bar.show {
+            bottom: 0;
+        }
+
+        .cta-bar a {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 28px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .cta-bar a:hover {
+            background: var(--secondary);
+            color: var(--bg-dark);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            left: 28px;
+            width: 50px;
+            height: 50px;
+            background: var(--bg-dark);
+            color: var(--secondary);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--secondary);
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+            font-size: 1.5rem;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* SCROLL REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER (LAYOUT A) -->
+    <header class="header" id="header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">🔥 Costelão do Gaúcho</a>
+            <nav class="nav-links">
+                <a href="#servicos">Como Funciona</a>
+                <a href="#cardapio">Carnes</a>
+                <a href="#estrutura">Estrutura</a>
+                <a href="https://api.whatsapp.com/send?phone=5571994140444&text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa!"
+                    target="_blank" rel="noopener noreferrer nofollow" class="btn-primary"
+                    style="padding: 10px 24px; font-size: 1rem; background: var(--secondary); color: var(--bg-dark); border: none; animation: none;">Reservar
+                    Mesa</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO FULLSCREEN COM FUNDO ESCURO (LAYOUT A) -->
+    <section class="hero">
+        <div class="reveal" style="z-index: 2;">
+            <div class="badge-hero">Desde 2017</div>
+            <h1>O Genuíno Toque<br><span>Dos Pampas</span></h1>
+            <p>Aqui você sente o cheiro da brasa antes mesmo de sentar à mesa.</p>
+            <a href="https://api.whatsapp.com/send?phone=5571994140444&text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa!"
+                target="_blank" rel="noopener noreferrer nofollow" class="btn-primary">
+                Venha Hoje
+            </a>
+        </div>
+    </section>
+
+    <!-- BARRA DE URGÊNCIA (COMPONENTE LAYOUT A) -->
+    <div class="urgency-bar">
+        🔥 O Fogo já está aceso! Atendemos hoje com o melhor churrasco da região.
+    </div>
+
+    <!-- ESTATÍSTICAS E PROVA SOCIAL -->
+    <div class="stats-bar">
+        <div class="container stats-grid reveal">
+            <div>
+                <div class="stat-num">4.3★</div>
+                <div class="stat-label">Google Avaliações</div>
+            </div>
+            <div>
+                <div class="stat-num">443+</div>
+                <div class="stat-label">Clientes Satisfeitos</div>
+            </div>
+            <div>
+                <div class="stat-num">R$ 40-60</div>
+                <div class="stat-label">Ticket Médio (Acessível)</div>
+            </div>
+            <div>
+                <div class="stat-num">2017</div>
+                <div class="stat-label">Tradição em Buraquinho</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 1: COMO FUNCIONA O SERVIÇO (OBRIGATÓRIO CHURRASCARIA) -->
+    <section id="servicos" class="section-padding">
+        <div class="container">
+            <h2 class="section-title reveal">Como Funciona Nosso Serviço</h2>
+            <p class="section-subtitle reveal">Escolha a melhor forma de matar a sua fome</p>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">🥩</div>
+                    <h3>Buffet com Churrasco</h3>
+                    <p>Sirva-se à vontade no nosso buffet de pratos quentes e saladas variadas, e pague no peso com
+                        direito aos cortes nobres saindo direto da brasa.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🥗</div>
+                    <h3>Buffet Sem Churrasco</h3>
+                    <p>Ideal para quem busca uma refeição farta e rápida do dia a dia. Excelente variedade de guarnições
+                        e acompanhamentos cobrados no peso.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Buffet Livre / À La Carte</h3>
+                    <p>Várias possibilidades: coma à vontade num valor fixo ou peça pratos e porções específicas do
+                        nosso menu direto na sua mesa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: DESTAQUES DO CARDÁPIO (CORTES PREMIUM) -->
+    <section id="cardapio" class="section-padding menu-section">
+        <div class="container">
+            <h2 class="section-title reveal">Cortes Direto da Brasa</h2>
+            <p class="section-subtitle reveal" style="color: #aaa;">O churrasco de verdade feito do jeito certo</p>
+
+            <div class="menu-grid">
+                <!-- ITEM 1 -->
+                <div class="menu-item reveal">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Costelão" class="menu-item-img" loading="lazy">
+                    <div class="menu-item-info">
+                        <h4>Costelão (Carro-chefe)</h4>
+                        <p>Assado lentamente, desmanchando na boca. A joia da casa.</p>
+                    </div>
+                </div>
+                <!-- ITEM 2 -->
+                <div class="menu-item reveal">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Bife Ancho" class="menu-item-img" loading="lazy">
+                    <div class="menu-item-info">
+                        <h4>Bife Ancho</h4>
+                        <p>Corte nobre com marmoreio perfeito e suculência extrema.</p>
+                    </div>
+                </div>
+                <!-- ITEM 3 -->
+                <div class="menu-item reveal">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Cupim" class="menu-item-img" loading="lazy">
+                    <div class="menu-item-info">
+                        <h4>Cupim Casqueirado</h4>
+                        <p>Textura inconfundível, macio por dentro e com aquela crosta.</p>
+                    </div>
+                </div>
+                <!-- ITEM 4 -->
+                <div class="menu-item reveal">
+                    <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Pão com Costelinha" class="menu-item-img" loading="lazy">
+                    <div class="menu-item-info">
+                        <h4>Pão com Costelinha</h4>
+                        <p>Entrada clássica gaúcha, crocante e muito bem recheada.</p>
+                    </div>
+                </div>
+                <!-- ITEM 5 -->
+                <div class="menu-item reveal">
+                    <img src="https://images.unsplash.com/photo-1627258950587-b9560f4eb789?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Mistão" class="menu-item-img" loading="lazy">
+                    <div class="menu-item-info">
+                        <h4>Mistão & Codorna</h4>
+                        <p>Para quem gosta de provar as variedades exóticas da grelha.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: BEBIDAS (OBRIGATÓRIO SEPARADO) -->
+    <section class="section-compact drinks-section">
+        <div class="container reveal">
+            <h2 class="section-title" style="font-size: 2.2rem;">Para Acompanhar</h2>
+            <div class="drinks-grid" style="margin-top: 40px;">
+                <div class="drink-card">
+                    <div style="font-size: 3rem;">🍺</div>
+                    <h4>Cerveja Geladíssima</h4>
+                    <p style="font-size: 0.9rem; margin-top: 8px;">Heineken e outras marcas trincando.</p>
+                </div>
+                <div class="drink-card">
+                    <div style="font-size: 3rem;">🍋</div>
+                    <h4>Caipirinhas</h4>
+                    <p style="font-size: 0.9rem; margin-top: 8px;">Limão Siciliano ou Frutas Vermelhas.</p>
+                </div>
+                <div class="drink-card">
+                    <div style="font-size: 3rem;">🥃</div>
+                    <h4>Cachaça Cortesia</h4>
+                    <p style="font-size: 0.9rem; margin-top: 8px;">Aquele trago para abrir o apetite.</p>
+                </div>
+                <div class="drink-card">
+                    <div style="font-size: 3rem;">☕</div>
+                    <h4>Café com Leite</h4>
+                    <p style="font-size: 0.9rem; margin-top: 8px;">Para finalizar a refeição em família.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: ESTRUTURA E CONFORTO (OBRIGATÓRIO CHURRASCARIA) -->
+    <section id="estrutura" class="section-padding">
+        <div class="container structure-grid">
+            <div class="reveal">
+                <h2 class="section-title" style="text-align: left;">Ambiente Familiar & Conforto Completo</h2>
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 20px;">Nossa casa em Lauro de Freitas foi
+                    projetada para receber você, sua família e seus amigos com o máximo de conforto, sem perder a alma
+                    rústica da cultura gaúcha.</p>
+                <ul class="structure-list">
+                    <li>Espaço amplo e bem ventilado</li>
+                    <li>Parquinho seguro para as crianças</li>
+                    <li>Estacionamento próprio no local</li>
+                    <li>Churrasqueiros e equipe altamente atenciosos</li>
+                </ul>
+                <a href="https://api.whatsapp.com/send?phone=5571994140444" target="_blank"
+                    rel="noopener noreferrer nofollow" class="btn-primary" style="margin-top: 24px;">Tirar dúvidas no
+                    WhatsApp</a>
+            </div>
+            <div class="reveal">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Espaço amplo do restaurante" class="structure-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5: DEPOIMENTOS HORIZONTAIS (LAYOUT A) -->
+    <section class="section-padding testimonials">
+        <div class="container">
+            <h2 class="section-title reveal">A Voz da Querência</h2>
+            <p class="section-subtitle reveal" style="color: #aaa; margin-bottom: 40px;">O que dizem os clientes que já
+                provaram do nosso fogo.</p>
+
+            <div class="test-grid reveal">
+                <div class="test-card">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-quote">"Comida muito boa, com ótimos pratos quentes e muitas saladas. Várias
+                        possibilidades de serviço."</p>
+                    <strong>— Cliente Real (Google)</strong>
+                </div>
+                <div class="test-card">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-quote">"Excelente opção, pastel de costela dentre outras opções incríveis. Cerveja
+                        geladíssima!"</p>
+                    <strong>— Cliente Real (Google)</strong>
+                </div>
+                <div class="test-card">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-quote">"O espaço é amplo com parquinho para crianças e estacionamento. Os
+                        churrasqueiros são muito atenciosos."</p>
+                    <strong>— Cliente Real (Google)</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA E LOCALIZAÇÃO -->
+    <section class="section-padding" style="padding-bottom: 0;">
+        <div class="container reveal">
+            <div class="map-wrapper">
+                <div class="map-info">
+                    <h3>📍 Onde a brasa queima</h3>
+                    <p style="margin: 16px 0; font-size: 1.1rem; line-height: 1.8;">R. Antônio Fagundes
+                        Pereira<br>Quadra D - Lote 36 - Buraquinho<br>Lauro de Freitas - BA<br>CEP: 42710-620</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px;"><strong>⏰ Horário de
+                            Funcionamento:</strong><br>Sábados a partir das 11h30<br>Dias úteis até as
+                        17h<br><em>(Consulte funcionamento via WhatsApp)</em></p>
+                    <a href="https://api.whatsapp.com/send?phone=5571994140444" target="_blank"
+                        rel="noopener noreferrer nofollow" class="btn-primary"
+                        style="background: var(--white); color: var(--primary); border: none; align-self: flex-start; padding: 12px 24px; font-size: 1rem;">Como
+                        Chegar</a>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.6200055106516!2d-38.318361!3d-12.8677777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7163fc2389f2a93%3A0xcaf759711681ab8b!2sCostel%C3%A3o%20do%20Ga%C3%BAcho!5e0!3m2!1spt-BR!2sbr!4v1716900000000"
+                    class="map-iframe" style="border:0;" allowfullscreen="" loading="lazy"
+                    title="Mapa de localização do Costelão do Gaúcho"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <h2>Costelão do Gaúcho</h2>
+            <p>O genuíno toque dos pampas no coração da Bahia.</p>
+            <p><strong>Reservas e Contato:</strong> (71) 99414-0444</p>
+
+            <a href="https://www.instagram.com/costelao.do.gaucho/" target="_blank" rel="noopener noreferrer nofollow"
+                class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                Siga no Instagram
+            </a>
+
+            <div style="border-top: 1px solid #333; margin-top: 40px; padding-top: 20px; font-size: 0.85rem;">
+                &copy; 2026 Costelão do Gaúcho. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE (LAYOUT A / COMPONENTE PRONTO) -->
+    <a href="https://api.whatsapp.com/send?phone=5571994140444&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Costelão%20do%20Gaúcho!"
+        target="_blank" rel="noopener noreferrer nofollow" class="wa-float">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M12.031 6.172c-2.32 0-4.519.903-6.16 2.544-3.4 3.4-3.4 8.92 0 12.319l-1.14 4.14 4.25-1.11c1.55.85 3.3 1.3 5.09 1.3 6.04 0 10.96-4.91 10.96-10.96s-4.92-10.959-10.96-10.959z" />
+        </svg>
+        <span>Garantir Mesa</span>
+    </a>
+
+    <!-- CTA BAR FIXA (APARECE NO SCROLL) -->
+    <div class="cta-bar" id="ctaBar">
+        <span>A carne já está na brasa! 🔥</span>
+        <a href="https://api.whatsapp.com/send?phone=5571994140444" target="_blank"
+            rel="noopener noreferrer nofollow">Reserve Agora</a>
+    </div>
+
+    <!-- BOTÃO VOLTAR AO TOPO (ESQUERDA) -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+    <!-- SCHEMA.ORG (JSON-LD) PARA SEO LOCAL -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Costelão do Gaúcho",
+      "image": "https://costelaodogaucho.com.br/hero.jpg",
+      "@id": "https://costelaodogaucho.com.br",
+      "url": "https://costelaodogaucho.com.br",
+      "telephone": "+5571994140444",
+      "priceRange": "R$40 - R$60",
+      "servesCuisine": "Churrasco Gaúcho",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Antônio Fagundes Pereira, Quadra D - Lote 36",
+        "addressLocality": "Lauro de Freitas",
+        "addressRegion": "BA",
+        "postalCode": "42710-620",
+        "addressCountry": "BR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.3",
+        "reviewCount": "443"
+      }
+    }
+    </script>
+
+    <!-- JS SEGURO -->
+    <script>
+        // JS Usa const/let, sem eval() ou innerHTML.
+
+        // SCROLL REVEAL (Intersection Observer)
+        const setupScrollReveal = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        };
+
+        // CONTROLES DE SCROLL (CTA BAR, BACK TO TOP, HEADER BG)
+        const handleScrollEvents = () => {
+            const ctaBar = document.getElementById('ctaBar');
+            const backToTop = document.getElementById('backToTop');
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY;
+
+                // Exibir CTA Bar Fixa
+                if (scrollPos > 600) {
+                    ctaBar.classList.add('show');
+                } else {
+                    ctaBar.classList.remove('show');
+                }
+
+                // Exibir Voltar ao Topo
+                if (scrollPos > 400) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+        };
+
+        // EVENTO CLICK VOLTAR AO TOPO
+        const setupBackToTop = () => {
+            const backToTopBtn = document.getElementById('backToTop');
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        };
+
+        // INICIALIZAÇÃO
+        document.addEventListener('DOMContentLoaded', () => {
+            setupScrollReveal();
+            handleScrollEvents();
+            setupBackToTop();
+        });
+    </script>
+</body>
+
+</html>
