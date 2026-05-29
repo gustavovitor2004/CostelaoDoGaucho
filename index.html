@@ -38,6 +38,7 @@
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
 
     <!-- FONTES (OSWALD + ROBOTO) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -378,8 +379,27 @@
 
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 24px;
+        }
+        .menu-grid-row1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .menu-grid-row2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 66.66%;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .menu-grid-row1,
+            .menu-grid-row2 {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
         }
 
         .menu-item {
@@ -592,115 +612,28 @@
             border-color: var(--secondary);
         }
 
-        /* UI FLUTUANTE (WHATSAPP, CTA, TOP) */
-        .wa-float {
-            position: fixed;
-            bottom: 28px;
-            right: 28px;
-            height: 56px;
-            border-radius: 50px;
-            background: #25d366;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 0 24px;
-            font-weight: 700;
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-            font-size: 1rem;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
-            z-index: 1000;
-            animation: wa-pulse 2.5s infinite;
-            transition: var(--transition);
-        }
+        /* UI FLUTUANTE — ESTRUTURA PINHEIRO */
+        .wa-float { position: fixed; bottom: 28px; right: 28px; height: 54px; border-radius: 50px; background: #25d366; color: var(--white); display: flex; align-items: center; gap: 9px; padding: 0 22px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 20px rgba(37,211,102,0.45); z-index: 1000; transition: var(--transition); animation: wa-pulse 2.5s infinite; }
+        .wa-float:hover { background: #20ba5a; transform: translateY(-2px); color: var(--white); }
+        @keyframes wa-pulse { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)} 50%{box-shadow:0 6px 30px rgba(37,211,102,0.7)} }
 
-        .wa-float:hover {
-            transform: translateY(-3px) scale(1.05);
-            color: var(--white);
-        }
+        .back-top { position: fixed; bottom: 28px; left: 28px; width: 46px; height: 46px; border-radius: 50%; background: var(--dark); color: var(--white); border: 2px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 999; opacity: 0; transform: translateY(12px); pointer-events: none; transition: all 0.3s ease; box-shadow: var(--shadow-md); }
+        .back-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .back-top:hover { background: var(--primary); border-color: var(--primary); }
 
-        @keyframes wa-pulse {
+        .cta-bar { position: fixed; bottom: -100px; left: 0; right: 0; background: var(--bg-dark); border-top: 3px solid var(--primary); padding: 13px 24px; z-index: 998; transition: bottom 0.4s ease; }
+        .cta-bar.show { bottom: 0; }
+        .cta-bar-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; gap: 16px; }
+        .cta-bar-text { font-weight: 700; font-size: 0.92rem; color: var(--white); }
+        .btn-cta-bar { display: inline-flex; align-items: center; gap: 8px; padding: 9px 22px; border-radius: 4px; background: var(--white); color: var(--bg-dark); font-weight: 900; font-size: 0.82rem; text-transform: uppercase; transition: var(--transition); }
+        .btn-cta-bar:hover { background: var(--secondary); color: var(--bg-dark); }
 
-            0%,
-            100% {
-                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            }
-
-            50% {
-                box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7);
-            }
-        }
-
-        .cta-bar {
-            position: fixed;
-            bottom: -100px;
-            left: 0;
-            right: 0;
-            background: var(--bg-dark);
-            border-top: 4px solid var(--primary);
-            padding: 16px 24px;
-            z-index: 998;
-            transition: bottom 0.4s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-            color: var(--white);
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-        }
-
-        .cta-bar.show {
-            bottom: 0;
-        }
-
-        .cta-bar a {
-            background: var(--primary);
-            color: var(--white);
-            padding: 10px 28px;
-            font-weight: 700;
-            transition: var(--transition);
-        }
-
-        .cta-bar a:hover {
-            background: var(--secondary);
-            color: var(--bg-dark);
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 28px;
-            left: 28px;
-            width: 50px;
-            height: 50px;
-            background: var(--bg-dark);
-            color: var(--secondary);
-            border-radius: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--secondary);
-            cursor: pointer;
-            opacity: 0;
-            pointer-events: none;
-            transition: var(--transition);
-            z-index: 999;
-            box-shadow: var(--shadow-md);
-            font-size: 1.5rem;
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .back-to-top:hover {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-            transform: translateY(-3px);
+        @media (max-width: 768px) {
+            .back-top { bottom: 80px; left: 16px; }
+            .wa-float { bottom: 80px; right: 16px; }
+            .cta-bar-text { display: none; }
+            .cta-bar-inner { justify-content: center; }
+            .btn-cta-bar { width: 100%; justify-content: center; }
         }
 
         /* SCROLL REVEAL */
@@ -811,49 +744,50 @@
             <p class="section-subtitle reveal" style="color: #aaa;">O churrasco de verdade feito do jeito certo</p>
 
             <div class="menu-grid">
-                <!-- ITEM 1 -->
-                <div class="menu-item reveal">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Costelão" class="menu-item-img" loading="lazy">
-                    <div class="menu-item-info">
-                        <h4>Costelão (Carro-chefe)</h4>
-                        <p>Assado lentamente, desmanchando na boca. A joia da casa.</p>
+                <!-- LINHA 1: 3 CARDS -->
+                <div class="menu-grid-row1">
+                    <div class="menu-item reveal">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Costelão" class="menu-item-img" loading="lazy">
+                        <div class="menu-item-info">
+                            <h4>Costelão (Carro-chefe)</h4>
+                            <p>Assado lentamente, desmanchando na boca. A joia da casa.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <img src="https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Bife Ancho" class="menu-item-img" loading="lazy">
+                        <div class="menu-item-info">
+                            <h4>Bife Ancho</h4>
+                            <p>Corte nobre com marmoreio perfeito e suculência extrema.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Cupim" class="menu-item-img" loading="lazy">
+                        <div class="menu-item-info">
+                            <h4>Cupim Casqueirado</h4>
+                            <p>Textura inconfundível, macio por dentro e com aquela crosta.</p>
+                        </div>
                     </div>
                 </div>
-                <!-- ITEM 2 -->
-                <div class="menu-item reveal">
-                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Bife Ancho" class="menu-item-img" loading="lazy">
-                    <div class="menu-item-info">
-                        <h4>Bife Ancho</h4>
-                        <p>Corte nobre com marmoreio perfeito e suculência extrema.</p>
+                <!-- LINHA 2: 2 CARDS CENTRALIZADOS -->
+                <div class="menu-grid-row2">
+                    <div class="menu-item reveal">
+                        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Pão com Costelinha" class="menu-item-img" loading="lazy">
+                        <div class="menu-item-info">
+                            <h4>Pão com Costelinha</h4>
+                            <p>Entrada clássica gaúcha, crocante e muito bem recheada.</p>
+                        </div>
                     </div>
-                </div>
-                <!-- ITEM 3 -->
-                <div class="menu-item reveal">
-                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Cupim" class="menu-item-img" loading="lazy">
-                    <div class="menu-item-info">
-                        <h4>Cupim Casqueirado</h4>
-                        <p>Textura inconfundível, macio por dentro e com aquela crosta.</p>
-                    </div>
-                </div>
-                <!-- ITEM 4 -->
-                <div class="menu-item reveal">
-                    <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Pão com Costelinha" class="menu-item-img" loading="lazy">
-                    <div class="menu-item-info">
-                        <h4>Pão com Costelinha</h4>
-                        <p>Entrada clássica gaúcha, crocante e muito bem recheada.</p>
-                    </div>
-                </div>
-                <!-- ITEM 5 -->
-                <div class="menu-item reveal">
-                    <img src="https://images.unsplash.com/photo-1627258950587-b9560f4eb789?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Mistão" class="menu-item-img" loading="lazy">
-                    <div class="menu-item-info">
-                        <h4>Mistão & Codorna</h4>
-                        <p>Para quem gosta de provar as variedades exóticas da grelha.</p>
+                    <div class="menu-item reveal">
+                        <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=300&q=80"
+                            alt="Mistão" class="menu-item-img" loading="lazy">
+                        <div class="menu-item-info">
+                            <h4>Mistão & Codorna</h4>
+                            <p>Para quem gosta de provar as variedades exóticas da grelha.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -961,7 +895,7 @@
                         Chegar</a>
                 </div>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.6200055106516!2d-38.318361!3d-12.8677777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7163fc2389f2a93%3A0xcaf759711681ab8b!2sCostel%C3%A3o%20do%20Ga%C3%BAcho!5e0!3m2!1spt-BR!2sbr!4v1716900000000"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.574!2d-38.299787!3d-12.870793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7163fc13a0effdb%3A0x56ec91ae54559e65!2sCostel%C3%A3o%20do%20Ga%C3%BAcho!5e0!3m2!1spt-BR!2sbr!4v1717000000000"
                     class="map-iframe" style="border:0;" allowfullscreen="" loading="lazy"
                     title="Mapa de localização do Costelão do Gaúcho"
                     sandbox="allow-scripts allow-same-origin"></iframe>
@@ -995,22 +929,20 @@
     <!-- WHATSAPP FLUTUANTE (LAYOUT A / COMPONENTE PRONTO) -->
     <a href="https://api.whatsapp.com/send?phone=5571994140444&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Costelão%20do%20Gaúcho!"
         target="_blank" rel="noopener noreferrer nofollow" class="wa-float">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-            <path
-                d="M12.031 6.172c-2.32 0-4.519.903-6.16 2.544-3.4 3.4-3.4 8.92 0 12.319l-1.14 4.14 4.25-1.11c1.55.85 3.3 1.3 5.09 1.3 6.04 0 10.96-4.91 10.96-10.96s-4.92-10.959-10.96-10.959z" />
-        </svg>
+        <i class="fa-brands fa-whatsapp" style="font-size:1.4rem"></i>
         <span>Garantir Mesa</span>
     </a>
 
-    <!-- CTA BAR FIXA (APARECE NO SCROLL) -->
+    <!-- CTA BAR FIXA -->
     <div class="cta-bar" id="ctaBar">
-        <span>A carne já está na brasa! 🔥</span>
-        <a href="https://api.whatsapp.com/send?phone=5571994140444" target="_blank"
-            rel="noopener noreferrer nofollow">Reserve Agora</a>
+        <div class="cta-bar-inner">
+            <div class="cta-bar-text">🔥 A carne já está na brasa! Garanta sua mesa agora:</div>
+            <a href="https://api.whatsapp.com/send?phone=5571994140444&text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa%20no%20Costelão%20do%20Gaúcho!" target="_blank" rel="noopener noreferrer nofollow" class="btn-cta-bar"><i class="fa-brands fa-whatsapp"></i> Garantir Mesa</a>
+        </div>
     </div>
 
-    <!-- BOTÃO VOLTAR AO TOPO (ESQUERDA) -->
-    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button class="back-top" id="backTop" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
 
     <!-- SCHEMA.ORG (JSON-LD) PARA SEO LOCAL -->
     <script type="application/ld+json">
@@ -1058,44 +990,18 @@
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         };
 
-        // CONTROLES DE SCROLL (CTA BAR, BACK TO TOP, HEADER BG)
-        const handleScrollEvents = () => {
-            const ctaBar = document.getElementById('ctaBar');
-            const backToTop = document.getElementById('backToTop');
-            const header = document.getElementById('header');
-
-            window.addEventListener('scroll', () => {
-                const scrollPos = window.scrollY;
-
-                // Exibir CTA Bar Fixa
-                if (scrollPos > 600) {
-                    ctaBar.classList.add('show');
-                } else {
-                    ctaBar.classList.remove('show');
-                }
-
-                // Exibir Voltar ao Topo
-                if (scrollPos > 400) {
-                    backToTop.classList.add('show');
-                } else {
-                    backToTop.classList.remove('show');
-                }
-            });
-        };
-
-        // EVENTO CLICK VOLTAR AO TOPO
-        const setupBackToTop = () => {
-            const backToTopBtn = document.getElementById('backToTop');
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        };
+        // CONTROLES DE SCROLL — ESTRUTURA PINHEIRO
+        const ctaBar = document.getElementById('ctaBar');
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            backTop.classList.toggle('show', window.scrollY > 400);
+            ctaBar.classList.toggle('show', window.scrollY > 600);
+        });
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
         // INICIALIZAÇÃO
         document.addEventListener('DOMContentLoaded', () => {
             setupScrollReveal();
-            handleScrollEvents();
-            setupBackToTop();
         });
     </script>
 </body>
